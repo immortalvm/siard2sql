@@ -1,0 +1,19 @@
+First of all, load ivm64 environment
+
+zlib
+-----
+To generate static lib (libz.a)
+    mkdir build-ivm64
+    cd build-ivm64
+
+    CC=ivm64-gcc ../configure --static
+    make -j4
+
+To clean configuration:
+    make distclean
+
+contrib/minilib
+---------------
+Build:
+    make clean
+    make -f Makefile-ivm64

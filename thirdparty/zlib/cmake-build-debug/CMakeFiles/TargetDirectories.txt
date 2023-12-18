@@ -1,0 +1,13 @@
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/zlib.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/zlibstatic.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/example.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/minigzip.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/example64.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/minigzip64.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/test.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/install.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/install/local.dir
+/home/eladio/Mis_proyectos/iDA/zip/zlib/cmake-build-debug/CMakeFiles/install/strip.dir
