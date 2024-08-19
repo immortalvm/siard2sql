@@ -7,7 +7,7 @@
     Eladio Gutierrez, Sergio Romero, Oscar Plata
     University of Malaga, Spain
 
-    May 2023 - Nov 2023
+    May 2023 - Jan 2024
 */
 #include <string.h>
 #include <stdio.h>

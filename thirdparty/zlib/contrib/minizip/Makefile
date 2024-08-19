@@ -1,11 +1,16 @@
 #CC=gcc
 CFLAGS := $(CFLAGS) -O2 -I../..
+#CXX=g++
+CXXFLAGS := $(CXXFLAGS) -O2 -I../..
 
 UNZ_OBJS = miniunz.o unzip.o ioapi.o ../../libz.a fake.o
 ZIP_OBJS = minizip.o zip.o   ioapi.o ../../libz.a
 
 .c.o:
 	$(CC) -c $(CFLAGS) $*.c
+
+.cpp.o:
+	$(CXX) -c $(CXXFLAGS) $*.cpp
 
 all: miniunz minizip libminizip.a
 
@@ -15,7 +20,7 @@ miniunz:  $(UNZ_OBJS)
 minizip:  $(ZIP_OBJS)
 	$(CC) $(CFLAGS) -o $@ $(ZIP_OBJS)
 
-libminizip.a: unzip.o ioapi.o ida_miniunz.o
+libminizip.a: unzip.o ioapi.o ida_miniunz.o ida_miniunz_utils.o
 	ar -r libminizip.a  *.o
 
 test:	miniunz minizip

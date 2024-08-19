@@ -89,7 +89,11 @@ only those schema names matching it will be converted. Use "" to not filter.
 ## Standards
 SIARD2SQL has been tested successfully with SIARD 2.1 archives. It has been also tested with SIARD version 2.2.
 
-Nevertheless some features such as external archives, and data types not directly supported by sqlite3 (like arrays and user-defined data types) are not yet supported.
+Nevertheless, the support of some advanced features is experimental. Such advanced features include external archives, and complex data types not directly supported by sqlite3 (like arrays and user-defined data types):
+
+- Non-empty complex type data are coded as _JSON_ strings.
+- Empty complex types are coded as empty strings (for example, an empty array is stored as "").
+- External files are limited to local filesystems, using POSIX path format (full URI not supported yet).
 
 UTF-8 encoding is assumed for all SIARD XML files.
 

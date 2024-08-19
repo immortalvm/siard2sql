@@ -2,6 +2,7 @@
 
 export CLEAN=
 export HOST=
+export TARGET_TESTS=
 
 check_ivm64_env(){
     if ! which ivm64-gcc; then
@@ -36,6 +37,9 @@ while test $# -gt 0
 do
     if test "$1" == '-c'; then
         CLEAN=1
+    elif test "$1" == '-t'; then
+        # Compile tests
+        TARGET_TESTS=tests
     elif test "$1" == 'linux'; then
         HOST=linux
     elif [[ "$1" =~ ^ivm ]] ; then
@@ -61,6 +65,8 @@ if test -n "$CLEAN" -a -z "$HOST"; then
 elif test -n "$CLEAN" -a -n "$HOST"; then
     HOST=$HOST make clean
     HOST=$HOST make -j${nproc}
+    ! test -z "$TARGET_TESTS" && HOST=$HOST make -j${nproc} "$TARGET_TESTS"
 else
     HOST="$HOST" make -j${nproc}
+    ! test -z "$TARGET_TESTS" && HOST=$HOST make -j${nproc} "$TARGET_TESTS"
 fi

@@ -18,6 +18,7 @@
 
 // Functions to extract zip files defined in thirdparty/zlib/contrib/minizip/miniunz.c
 extern int IDA_miniunz_do_unzip(const char *zipfilename, char *filename);
+extern void IDA_minunz_close_all_open_zip();
 
 // Unzip a (SIARD) zip file (see miniunz.c)
 // If filename != NULL, only this particular file is extracted,
@@ -78,4 +79,9 @@ char* IDA_get_siard_version_from_dir(const char* path_to_siard, char* buff, long
         return buff;
     else
         return NULL;
+}
+
+// Public function to close all indexed (cached) open zip
+void IDA_unzip_close_all(){
+    IDA_minunz_close_all_open_zip();
 }
